@@ -59,6 +59,10 @@ ul {
   cursor: pointer;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .button:hover {
   color: #5368df;
   background-color: white;
@@ -102,9 +106,9 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -116,8 +120,15 @@ ul {
 }
 
 .features__img {
+  max-height: 350px;
   position: relative;
   z-index: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.features__text {
+  margin-left: 10%;
 }
 
 .features__img_bg {
@@ -144,11 +155,20 @@ ul {
   font-size: 0.75rem;
   font-weight: 400;
   padding: 1rem 2rem;
+  cursor: pointer;
 }
 
-.features__tabs_button:nth-child(1) {
+.features__tabs_button-active {
   margin-bottom: -1px;
   border-bottom: 3px solid red;
+}
+
+.features__tabs_button:hover {
+  color: #fa5757;
+}
+
+.features__tabs_button:focus {
+  outline: none;
 }
 
 .download {

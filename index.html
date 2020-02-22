@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="main.css">
 
 		<title>Frontend Mentor | Bookmark landing page</title>
-
+		
 	</head>
 	<body>
 		<nav class="nav">
@@ -46,18 +46,18 @@
 				<p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
 			</div>
 			<div class="features__tabs">
-				<button class="features__tabs_button">Simple Bookmarking</button>
-				<button class="features__tabs_button">Speedy Searching</button>
-				<button class="features__tabs_button">Easy Sharing</button>
+				<button class="features__tabs_button features__tabs_button-active" onclick="tabClick(0);">Simple Bookmarking</button>
+				<button class="features__tabs_button" onclick="tabClick(1);">Speedy Searching</button>
+				<button class="features__tabs_button" onclick="tabClick(2);">Easy Sharing</button>
 			</div>
 			<div class="features__slide">
 				<div class="features__img-wrap">
-					<img class="features__img" src="images/illustration-features-tab-1.svg" alt="Website features illustration">
+					<img class="features__img" id="features__img" src="images/illustration-features-tab-1.svg" alt="Website features illustration">
 					<div class="img__bg features__img_bg"></div>
 				</div>
-				<div class="text">
-					<h2>Bookmark in one click</h2>
-					<p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourites sites.</p>
+				<div class="text features__text">
+					<h2 id="features__h2">Bookmark in one click</h2>
+					<p id="features__p">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourites sites.</p>
 					<button class="button">More info</button>
 				</div>
 			</div>			
@@ -127,5 +127,6 @@
 			</div>
 			<button class="button">More info</button>
 		</section>
+		<script src="main.js"></script>
 	</body>
 </html>

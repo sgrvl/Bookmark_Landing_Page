@@ -4,15 +4,20 @@
     @include flex-col(center, center)
 
     &__slide
-        @include flex-row(space-between, center)
+        @include flex-row(center, center)
         margin: 4rem 0
 
     &__img-wrap
             position: relative
     
     &__img
+        max-height: 350px
         position: relative
         z-index: 1
+        object-fit: contain
+
+    &__text
+        margin-left: 10%
 
     &__img_bg
         z-index: 0
@@ -32,7 +37,15 @@
             font-size: 0.75rem
             font-weight: 400
             padding: 1rem 2rem
+            cursor: pointer
 
-            &:nth-child(1)
+            &-active
                 margin-bottom: -1px
                 border-bottom: 3px solid red
+
+            &:hover 
+                color: $red
+
+            &:focus 
+                outline: none
+
