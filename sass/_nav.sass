@@ -1,0 +1,24 @@
+//temp
+
+.nav
+    display: flex
+    justify-content: space-between
+    padding: 2rem 6rem
+    &__link-wrap 
+        width: 40%
+        @include flex-row(space-between, center)
+
+    &__link
+        font-size: 0.6rem
+        cursor: pointer
+        
+        &:hover
+            color: $red
+
+    &__button
+        background-color: $red
+        padding: 0.5rem 1.5rem
+
+        &:hover
+            color: $red
+            box-shadow: $box-shadow, inset 0px 0px 0px 1px $red

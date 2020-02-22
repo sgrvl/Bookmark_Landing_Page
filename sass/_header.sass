@@ -1,0 +1,24 @@
+.header    
+    @include page-padding
+    @include flex-row(space-between, center)
+    @include block-margin
+
+    &_text
+        *
+            margin: 0.75rem 0
+
+    &__img-wrap
+        position: relative
+    
+    &__img
+        position: relative
+        z-index: 1
+        margin-right: -5rem
+
+    &__button_firefox
+        background-color: transparentize($gray, 0.95)
+        margin-left: 0.5rem
+        color: $darkBlue
+
+.img__bg-header
+    transform: translate(15%,40%)

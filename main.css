@@ -1,1 +1,239 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap");
+* {
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #252b46;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #9194a1;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 135%;
+}
+
+ul {
+  list-style: none;
+}
+
+.description {
+  text-align: center;
+  max-width: 40%;
+}
+
+.text {
+  max-width: 35%;
+}
+
+.button {
+  color: white;
+  font-weight: 400;
+  background-color: #5368df;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.6rem;
+  padding: 0.5rem 1rem;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #5368df;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 1px #5368df;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 1px #5368df;
+}
+
+.img__bg {
+  background-color: #5368df;
+  width: 150%;
+  height: 75%;
+  border-radius: 10rem 0 0 10rem;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+}
+
+.faq {
+  padding: 0 6rem;
+}
+
+.features {
+  padding: 0 6rem;
+  margin: 2.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4rem 0;
+}
+
+.features__img-wrap {
+  position: relative;
+}
+
+.features__img {
+  position: relative;
+  z-index: 1;
+}
+
+.features__img_bg {
+  z-index: 0;
+  height: 100%;
+  -webkit-transform: rotate(180deg) translate(40%, -20%);
+          transform: rotate(180deg) translate(40%, -20%);
+}
+
+.features__tabs {
+  margin-top: 4rem;
+  border-bottom: 1px solid #9194a1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: (1fr)[3];
+      grid-template: 1fr/repeat(3, 1fr);
+}
+
+.features__tabs_button {
+  border-style: none;
+  background-color: transparent;
+  color: #9194a1;
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding: 1rem 2rem;
+}
+
+.features__tabs_button:nth-child(1) {
+  margin-bottom: -1px;
+  border-bottom: 3px solid red;
+}
+
+.download {
+  padding: 0 6rem;
+}
+
+.header {
+  padding: 0 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2.5rem 0;
+}
+
+.header_text * {
+  margin: 0.75rem 0;
+}
+
+.header__img-wrap {
+  position: relative;
+}
+
+.header__img {
+  position: relative;
+  z-index: 1;
+  margin-right: -5rem;
+}
+
+.header__button_firefox {
+  background-color: rgba(145, 148, 161, 0.05);
+  margin-left: 0.5rem;
+  color: #252b46;
+}
+
+.img__bg-header {
+  -webkit-transform: translate(15%, 40%);
+          transform: translate(15%, 40%);
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 6rem;
+}
+
+.nav__link-wrap {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__link {
+  font-size: 0.6rem;
+  cursor: pointer;
+}
+
+.nav__link:hover {
+  color: #fa5757;
+}
+
+.nav__button {
+  background-color: #fa5757;
+  padding: 0.5rem 1.5rem;
+}
+
+.nav__button:hover {
+  color: #fa5757;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 1px #fa5757;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 1px #fa5757;
+}
+/*# sourceMappingURL=main.css.map */

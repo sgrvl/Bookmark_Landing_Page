@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+
+$blue: hsl(231, 69%, 60%)
+$red: hsl(0, 94%, 66%)
+$gray: hsl(229, 8%, 60%)
+$darkBlue: hsl(229, 31%, 21%)
+$box-shadow: 0 1px 1px rgba(0,0,0,0.10), 0 2px 2px rgba(0,0,0,0.10), 0 4px 4px rgba(0,0,0,0.10),  0 8px 8px rgba(0,0,0,0.05)
+
+*
+    font-family: 'Rubik', sans-serif
+    font-size: 18px
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    color: $darkBlue
+    font-weight: 500
+    line-height: 120%
+
+body 
+    overflow-x: hidden
+    width: 100%
+    max-width: 100vw
+
+h1 
+    font-size: 2rem
+
+h2 
+    font-size: 1.25rem
+    margin-bottom: 1rem
+    
+p 
+    color: $gray
+    font-weight: 400
+    font-size: 0.75rem
+    line-height: 135%
+
+ul 
+    list-style: none 
+
+.description
+    text-align: center
+    max-width: 40%
+
+
+.text
+    max-width: 35%
+
+.button
+    color: white
+    font-weight: 400
+    background-color: $blue
+    border: none
+    border-radius: 3px
+    font-size: 0.6rem
+    padding: 0.5rem 1rem
+    box-shadow: $box-shadow
+    cursor: pointer
+
+    &:hover 
+        color: $blue
+        background-color: white
+        box-shadow: $box-shadow, inset 0px 0px 0px 1px $blue
+              
+.img__bg
+    background-color: $blue
+    width: 150%
+    height: 75%
+    border-radius: 10rem 0 0 10rem
+    position: absolute
+    z-index: 0
+    top: 0

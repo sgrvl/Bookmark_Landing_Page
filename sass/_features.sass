@@ -1,0 +1,38 @@
+.features
+    @include page-padding
+    @include block-margin
+    @include flex-col(center, center)
+
+    &__slide
+        @include flex-row(space-between, center)
+        margin: 4rem 0
+
+    &__img-wrap
+            position: relative
+    
+    &__img
+        position: relative
+        z-index: 1
+
+    &__img_bg
+        z-index: 0
+        height: 100%
+        transform: rotate(180deg) translate(40%,-20%)
+
+    &__tabs
+        margin-top: 4rem
+        border-bottom: 1px solid $gray
+        display: grid
+        grid-template: 1fr / repeat(3, 1fr)
+
+        &_button
+            border-style: none
+            background-color: transparent
+            color: $gray
+            font-size: 0.75rem
+            font-weight: 400
+            padding: 1rem 2rem
+
+            &:nth-child(1)
+                margin-bottom: -1px
+                border-bottom: 3px solid red
