@@ -4,25 +4,33 @@
     @include flex-col(center, center)
 
     &__slide
-        @include flex-row(center, center)
-        margin: 4rem 0
+        display: grid
+        grid-template: 100% / 50% 50%
+        width: 100%
+        margin: 4rem auto
 
     &__img-wrap
             position: relative
+            justify-self: flex-end
+            padding-right: 15%
     
     &__img
         max-height: 350px
+        width: 100%
         position: relative
         z-index: 1
         object-fit: contain
+        
 
     &__text
-        margin-left: 10%
+        max-width: 85%
+        padding-left: 10%
+        @include flex-col(center, flex-start)
 
     &__img_bg
         z-index: 0
         height: 100%
-        transform: rotate(180deg) translate(40%,-20%)
+        transform: rotate(180deg) translate(75%,-20%)
 
     &__tabs
         margin-top: 4rem

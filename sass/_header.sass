@@ -1,7 +1,12 @@
 .header    
     @include page-padding
-    @include flex-row(space-between, center)
+    // @include flex-row(space-between, center)
     @include block-margin
+
+    display: grid
+    grid-template: 100% / 50% 50%
+    justify-items: center
+    align-items: center
 
     &_text
         *
@@ -9,11 +14,12 @@
 
     &__img-wrap
         position: relative
+        margin-right: -10%
     
     &__img
+        width: 100%
         position: relative
         z-index: 1
-        margin-right: -5rem
 
     &__button_firefox
         background-color: transparentize($gray, 0.95)
