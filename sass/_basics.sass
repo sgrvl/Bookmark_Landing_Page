@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500&display=swap');
 
 $blue: hsl(231, 69%, 60%)
 $red: hsl(0, 94%, 66%)
@@ -19,12 +19,18 @@ $box-shadow: 0 1px 1px rgba(0,0,0,0.10), 0 2px 2px rgba(0,0,0,0.10), 0 4px 4px r
 html 
     overflow-x: hidden
     max-width: 1920px
+    width: 100%
     margin: 0 auto
 
 body 
     overflow-x: hidden
     width: 100%
     margin: 0 auto
+
+.stop-scroll
+    height: 100vh
+    width: 100vw
+    overflow: hidden
 
 h1 
     font-size: 2rem
@@ -46,17 +52,23 @@ ul
 .description
     text-align: center
     max-width: 40%
+    @include tablet
+        max-width: 100%
 
 
 .text
     max-width: 85%
+    @include tablet
+        max-width: 100%
+
+$border-radius: 5px
 
 .button
     color: white
     font-weight: 400
     background-color: $blue
     border: none
-    border-radius: 3px
+    border-radius: $border-radius
     font-size: 0.6rem
     padding: 0.5rem 1rem
     box-shadow: $box-shadow

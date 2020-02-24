@@ -2,21 +2,100 @@
     display: flex
     justify-content: space-between
     @include page-padding(2rem)
-    &__link-wrap 
-        width: 40%
-        @include flex-row(space-between, center)
 
-    &__link
-        font-size: 0.6rem
-        cursor: pointer
+    @include desktop
+        &__hamburger
+            display: none
+
+        &__link-wrap 
+            width: 40%
+            @include flex-row(space-between, center)
+
+        &__link
+            font-size: 0.6rem
+            cursor: pointer
         
-        &:hover
-            color: $red
+            &:hover
+                color: $red
 
-    &__button
-        background-color: $red
-        padding: 0.5rem 1.5rem
+        &__button
+            background-color: $red
+            padding: 0.5rem 1.5rem
 
-        &:hover
-            color: $red
-            box-shadow: $box-shadow, inset 0px 0px 0px 1px $red
+            &:hover
+                color: $red
+                box-shadow: $box-shadow, inset 0px 0px 0px 1px $red
+
+        &__mobile
+            display: none
+
+    @include tablet
+        &__hamburger-hidden
+            opacity: 0            
+
+        &__link-wrap
+            display: none !important 
+
+        &__mobile_active
+            opacity: 1 !important
+            pointer-events: auto !important
+            transition: 0.5s
+
+        &__mobile            
+            opacity: 0
+            transition: 0.5s
+            pointer-events: none     
+            @include page-padding(2rem)            
+            position: absolute
+            top: 0
+            left: 0
+            height: 100vh
+            width: 100vw
+            z-index: 3
+            background-color: transparentize(#242A45, 0.1)
+            text-align: center
+
+            $text-max-width: 400px
+
+            &_wrap
+                width: 100%
+                height: 90%
+                @include flex-col(space-between, center)
+                
+                &_link
+                    width: 100%
+                    @include flex-col(center,center)
+            &_head
+                width: 100%
+                @include flex-row(space-between, center)
+                margin-bottom: 3rem
+
+            &_link
+                color: white
+                font-weight: 300
+                font-size: 1.25rem
+                width: 100%
+                max-width: $text-max-width
+                padding: 1rem
+                $border-color: rgba(255, 255, 255, 0.2)
+                border-top: 1px solid $border-color
+                &:nth-child(3)
+                    border-bottom: 1px solid $border-color
+
+            &_button
+                border: 2px solid white
+                color: white
+                width: 100%
+                max-width: $text-max-width                
+                margin: 2rem auto
+                padding: 0.5rem 2rem
+                font-weight: 400
+                font-size: 1.25rem
+                background-color: transparent
+                border-radius: $border-radius
+
+            &_social
+                *
+                    margin: 0 0.75rem
+
+    

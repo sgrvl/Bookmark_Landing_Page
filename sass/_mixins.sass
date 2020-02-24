@@ -1,6 +1,9 @@
 @mixin page-padding($top-bot: 0,$left-right: 10%)
     padding: $top-bot $left-right
 
+@mixin page-padding-mobile($top-bot: 0, $left-right: 5%)
+    padding: $top-bot $left-right
+
 
 @mixin block-margin
     margin: 2.5rem 0
@@ -10,8 +13,17 @@
     justify-content: $justify
     align-items: $align
 
-@mixin flex-col($justify, $align)
+@mixin flex-col($justify, $align, $direction: column)
     display: flex
-    flex-direction: column
+    flex-direction: $direction
     justify-content: $justify
-    align-items: $align
+    align-items: $align  
+
+@mixin tablet
+    @media (max-width: 768px)
+        @content
+
+@mixin desktop
+    @media (min-width: 769px)
+        @content
+        

@@ -27,13 +27,36 @@
 				<li class="nav__link">CONTACT</li>
 				<button class="button nav__button">LOGIN</button>
 			</ul>
+			<div class="nav__hamburger" id="bigmac-wrap">
+				<svg id="bigmac" xmlns="http://www.w3.org/2000/svg" width="18" height="15"><path fill="#242A45" fill-rule="evenodd" d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"/></svg>
+			</div>
+			<div id="mo-menu" class="nav__mobile nav__mobile_hidden">
+				<div class="nav__mobile_head">
+					<img src="images/logo-bookmark-white.svg" alt="Bookmark Logo">
+					<img id="mo-close" src="images/icon-close.svg" alt="close icon">
+				</div>
+				<div class="nav__mobile_wrap">
+					<ul class="nav__mobile_wrap_link">
+						<li class="nav__mobile_link">FEATURES</li>
+						<li class="nav__mobile_link">PRICING</li>
+						<li class="nav__mobile_link">CONTACT</li>
+						<button class="nav__mobile_button">LOGIN</button>
+					</ul>				
+					<div class="nav__mobile_social">
+						<img src="images/icon-facebook.svg" alt="Facebook Icon">
+						<img src="images/icon-twitter.svg" alt="Twitter Icon">
+					</div>		
+				</div>			
+			</div>
 		</nav>
 		<header class="header">
 			<div class="text header_text">
 				<h1>A Simple Bookmark Manager</h1>
 				<p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-				<button class="button header__button">Get it on Chrome</button>
-				<button class="button header__button header__button_firefox">Get it on Firefox</button>
+				<div class="header__button-wrap">
+					<button class="button header__button">Get it on Chrome</button>
+					<button class="button header__button header__button_firefox">Get it on Firefox</button>
+				</div>				
 			</div>
 			<div class="header__img-wrap">
 				<img class=header__img src="images/illustration-hero.svg" alt="Generic web page illustration">

@@ -35,3 +35,24 @@ function tabClick(e) {
     }
 
 }
+
+const burger = document.getElementById('bigmac');
+const burWrap = document.getElementById('bigmac-wrap');
+const close = document.getElementById('mo-close');
+const menu = document.getElementById('mo-menu');
+
+function noScroll() {
+    window.scrollTo(0,0);
+}
+
+burger.addEventListener('click', function(){
+    menu.classList.toggle('nav__mobile_active');
+    burWrap.classList.toggle('nav__hamburger-hidden');
+    window.addEventListener('scroll', noScroll);
+})
+
+close.addEventListener('click',function(){
+    menu.classList.toggle('nav__mobile_active');
+    burWrap.classList.toggle('nav__hamburger-hidden');
+    window.removeEventListener('scroll', noScroll);
+});

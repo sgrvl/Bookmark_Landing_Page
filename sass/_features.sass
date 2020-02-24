@@ -7,12 +7,18 @@
         display: grid
         grid-template: 100% / 50% 50%
         width: 100%
+        @include tablet
+            @include flex-col(center, center)
 
     &__img-wrap
-            position: relative
-            justify-self: flex-end
-            padding-right: 15%
-            height: 350px
+        position: relative
+        justify-self: flex-end
+        padding-right: 15%
+        @include desktop
+            height: 350px        
+        @include tablet
+            padding-right: 0
+            
     
     &__img
         width: 100%
@@ -26,18 +32,41 @@
         max-width: 85%
         padding-left: 10%
         @include flex-col(center, flex-start)
+        @include tablet
+            padding:
+                left: 0
+                top: 20%
+            text-align: center           
+            @include flex-col(center,center)
 
     &__img_bg
         z-index: 0
-        height: 250px
+        height: 70%
         transform: translate(-65%,40%)
+        @media screen and ( min-width: 1440px )
+            transform: translate(-65%,70%)
+        @include tablet
+            width: 120%
+            height: 100%
+            transform: translate(-50%,25%)
         border-radius: 0 10rem 10rem 0
 
+    $lighter-gray: transparentize($gray, 0.8)
+
     &__tabs
-        margin-top: 4rem
-        border-bottom: 1px solid $gray
+        margin:
+            top: 4vh
+            bottom: 3vh
+        
         display: grid
         grid-template: 1fr / repeat(3, 1fr)
+        @include desktop
+            border-bottom: 1px solid $lighter-gray
+        @include tablet
+            @include flex-col(center,center)
+            width: 100%
+            max-width: 400px
+            border-top: 1px solid $lighter-gray
 
         &_button
             border-style: none
@@ -47,14 +76,33 @@
             font-weight: 400
             padding: 1rem 2rem
             cursor: pointer
+            @include tablet
+                width: 100%                
+                border-bottom: 1px solid $lighter-gray 
 
             &-active
-                margin-bottom: -1px
-                border-bottom: 3px solid red
+                @include desktop
+                    border-bottom: 3px solid red
+                color: black
+                transform: translateY(1px)
+
+                @include tablet
+                    &:after
+                        content: ""
+                        display: block
+                        width: 50%
+                        max-width: 200px
+                        padding-bottom: 0.75rem
+                        transform: translateY(1px)
+                        border-bottom: 3px solid red
+                        margin: 0 auto
+                            bottom: -1rem
+                
 
             &:hover 
                 color: $red
 
-            &:focus 
+            &:focus
+                color: black
                 outline: none
 
