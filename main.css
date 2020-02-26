@@ -863,7 +863,8 @@ ul {
 .footer__contact-us_form input[type="submit"]:hover {
   background-color: white;
   color: #fa5757;
-  border: 1px solid #fa5757;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #fa5757;
+          box-shadow: inset 0px 0px 0px 1px #fa5757;
 }
 
 @media (min-width: 769px) {
