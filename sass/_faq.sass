@@ -1,2 +1,40 @@
 .faq
     @include page-padding
+    @include flex-col(center,center)
+
+    &__description
+        margin: 0 auto
+            bottom: 5rem
+    &__questions-wrap
+        width: 100%
+        max-width: 650px        
+    &__question
+        cursor: pointer
+        border-bottom: 1px solid $lighter-gray
+        &:first-child
+            border-top: 1px solid $lighter-gray
+        @include desktop                
+            &:hover
+                .faq__question_text
+                    color: $red
+        &_block
+            @include flex-row(space-between, center)
+            width: 100%
+            padding: 1rem 0
+        &_arrow
+            background-color: transparent
+            border: none
+            stroke: $blue
+            cursor: pointer
+            &:focus                
+                outline: none
+            &-active
+                stroke: $red
+                transform: rotate(180deg)
+        &_answer
+            line-height: 1.75
+            display: none
+            &-active
+                display: block
+    &__button
+        margin: 3rem 0

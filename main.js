@@ -1,3 +1,5 @@
+//Tab slider
+
 const tab = document.getElementsByClassName('features__tabs_button');
 var e = 0;
 
@@ -36,6 +38,8 @@ function tabClick(e) {
 
 }
 
+//Hamburger menu
+
 const burger = document.getElementById('bigmac');
 const burWrap = document.getElementById('bigmac-wrap');
 const close = document.getElementById('mo-close');
@@ -55,4 +59,19 @@ close.addEventListener('click',function(){
     menu.classList.toggle('nav__mobile_active');
     burWrap.classList.toggle('nav__hamburger-hidden');
     window.removeEventListener('scroll', noScroll);
-});
+})
+
+//FAQ section
+
+const question = document.getElementsByClassName('faq__question');
+var q = 0;
+var o = 0;
+
+for(q; q<question.length; q++){
+    question[q].addEventListener('click', function(){
+        var arrow = this.querySelector('.faq__question_arrow')
+        var answer = this.querySelector('.faq__question_answer');
+        answer.classList.toggle('faq__question_answer-active');
+        arrow.classList.toggle('faq__question_arrow-active');
+    });
+}

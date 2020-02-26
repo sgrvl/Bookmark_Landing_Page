@@ -12,7 +12,7 @@
 		href="./images/favicon-32x32.png"
 		/>
 		<link rel="stylesheet" href="main.css">
-
+		
 		<title>Frontend Mentor | Bookmark landing page</title>
 		
 	</head>
@@ -86,7 +86,7 @@
 			</div>			
 		</section>
 		<section class="download">
-			<div class="description">
+			<div class="description download__description">
 				<h2>Download the extension</h2>
 				<p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
 			</div>
@@ -95,60 +95,77 @@
 					<img src="images/logo-chrome.svg" alt="chrome logo">
 					<h3 class="download__card_title">Add to Chrome</h3>
 					<span class="download__card_text">Minimum version 62</span>
-					<img src="images/bg-dots.svg">
-					<button class="button">Add & Install Extension</button>
+					<img class="download__card_dots" src="images/bg-dots.svg">
+					<button class="button download__card_button">Add & Install Extension</button>
 				</div>
 				<div class="download__card">
 					<img src="images/logo-firefox.svg" alt="chrome logo">
 					<h3 class="download__card_title">Add to Chrome</h3>
 					<span class="download__card_text">Minimum version 55</span>
-					<img src="images/bg-dots.svg">
-					<button class="button">Add & Install Extension</button>
+					<img class="download__card_dots" src="images/bg-dots.svg">
+					<button class="button download__card_button">Add & Install Extension</button>
 				</div>
 				<div class="download__card">
 					<img src="images/logo-opera.svg" alt="chrome logo">
 					<h3 class="download__card_title">Add to Chrome</h3>
 					<span class="download__card_text">Minimum version 46</span>
-					<img src="images/bg-dots.svg">
-					<button class="button">Add & Install Extension</button>
+					<img class="download__card_dots" src="images/bg-dots.svg">
+					<button class="button download__card_button">Add & Install Extension</button>
 				</div>
 			</div>
 		</section>
 		<section class="faq">
-			<div class="description">
+			<div class="description faq__description">
 				<h2>Frequently Asked Questions</h2>
 				<p>Here are some of our FAQs. If you have any other questions you'd like answered, please feel free to email us.</p>
 			</div>
 			<div class="faq__questions-wrap">
 				<div class="faq__question">
-					<span class="faq__question_text">What is Bookmark?</span>
-					<button class="faq__question_arrow">
-						<img src="images/icon-arrow.svg">
-					</button>
-					<div class="faq__question_answer">
-						<!-- lorem ipsum -->
+					<div class="faq__question_block">
+						<span class="faq__question_text">What is Bookmark?</span>
+						<button class="faq__question_arrow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+						</button>
+					</div>					
+					<p class="faq__question_answer">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consectetur! Dignissimos magni quod debitis, asperiores iure exercitationem libero, ipsam soluta eum repellat officia in voluptate modi! Rerum ipsum dolor fuga.	
+					</p>
+				</div>
+				<div class="faq__question">
+					<div class="faq__question_block">
+						<span class="faq__question_text">How can I request a new browser?</span>
+						<button class="faq__question_arrow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+						</button>
 					</div>
+					<p class="faq__question_answer" id="faq_answer">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consectetur! Dignissimos magni quod debitis, asperiores iure exercitationem libero, ipsam soluta eum repellat officia in voluptate modi! Rerum ipsum dolor fuga.	
+					</p>				
 				</div>
 				<div class="faq__question">
-					<span class="faq__question_text">How can I request a new browser?</span>
-					<button class="faq__question_arrow">
-						<img src="images/icon-arrow.svg">
-					</button>
+					<div class="faq__question_block">
+						<span class="faq__question_text">Is there a mobile app?</span>
+						<button class="faq__question_arrow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+						</button>
+					</div>
+					<p class="faq__question_answer">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consectetur! Dignissimos magni quod debitis, asperiores iure exercitationem libero, ipsam soluta eum repellat officia in voluptate modi! Rerum ipsum dolor fuga.	
+					</p>
 				</div>
 				<div class="faq__question">
-					<span class="faq__question_text">Is there a mobile app?</span>
-					<button class="faq__question_arrow">
-						<img src="images/icon-arrow.svg">
-					</button>
-				</div>
-				<div class="faq__question">
-					<span class="faq__question_text">What about other Chromium browsers?</span>
-					<button class="faq__question_arrow">
-						<img src="images/icon-arrow.svg">
-					</button>
+					<div class="faq__question_block">
+						<span class="faq__question_text">What about other Chromium browsers?</span>
+						<button class="faq__question_arrow">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
+						</button>
+					</div>
+					<p class="faq__question_answer">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consectetur! Dignissimos magni quod debitis, asperiores iure exercitationem libero, ipsam soluta eum repellat officia in voluptate modi! Rerum ipsum dolor fuga.	
+					</p>
 				</div>
 			</div>
-			<button class="button">More info</button>
+			<button class="button faq__button">More info</button>
 		</section>
 		<script src="main.js"></script>
 	</body>
