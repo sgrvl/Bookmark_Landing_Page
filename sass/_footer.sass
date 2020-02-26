@@ -1,0 +1,94 @@
+.footer    
+    &__contact-us
+        @include page-padding(3rem)
+        @include flex-col(center,center)
+        text-align: center
+        background-color: $blue
+        *
+            color: white
+            margin: .75rem 0
+            
+        &_text
+            font-size: 0.55rem
+            font-weight: 400
+            letter-spacing: 0.35rem
+            line-height: 200%
+            @include desktop(525px)
+                width: 30%
+                min-width: 400px
+        &_title
+            font-size: 1.5rem
+            @include desktop(525px)
+                width: 30%
+                min-width: 400px
+        &_form      
+            width: 100% 
+            input[type="email"]
+                border-radius: $border-radius
+                padding: 0.5rem 1rem
+                font-size: 0.6rem
+                border: none
+                margin: 0.25rem
+                color: $darkBlue
+                width: 30%
+                outline: none
+                &::placeholder
+                    color: transparentize($gray, 0.3)
+                &:invalid:not(:placeholder-shown)
+                    border: 1px solid $red
+            input[type="submit"]
+                background-color: $red
+                margin: 0.25rem
+                box-shadow: none
+                width: 15%
+                &:hover
+                    background-color: white
+                    color: $red
+                    border: 1px solid $red
+            @include desktop
+                @include flex-row(center,center)
+            @include tablet
+                @include flex-col(center, center)
+                width: 100%
+                input[type="email"]
+                    width: 100%
+                    max-width: 350px
+                input[type="submit"]
+                    width: 100%
+                    max-width: 350px
+                
+                    
+    &__foot
+        @include page-padding(2rem)
+        @include desktop
+            @include flex-row(space-between, center)
+        @include tablet
+            @include flex-col(center, center)
+            text-align: center
+        background-color: $darkBlue        
+    &__nav
+        width: 50%
+        @include desktop
+            @include flex-row(flex-start, center)
+        &_list
+            @include desktop
+                width: 100%
+                padding-left: 1.5rem
+                @include flex-row(flex-start, center)
+            &_link
+                color: rgba(255, 255, 255, 0.9)
+                font-size: 0.75rem
+                font-weight: 400
+                margin: 0 1.5rem
+                cursor: pointer
+                @include tablet
+                    margin: 1.5rem
+                &:hover
+                    color: $red
+    &__social svg
+        cursor: pointer
+        fill: white
+        &:hover
+            fill: $red
+        &:last-child
+            margin-left: 1.5rem
